@@ -1,0 +1,55 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cell {
+  background: blue;
+  margin: 2px;
+  animation: 3s infinite alternate slidein;
+}
+
+.cell-1 {
+  background: deepskyblue;
+}
+.cell-2 {
+  background: orangered;
+}
+.cell-3 {
+  background: royalblue;
+}
+.cell-4 {
+  background: gold;
+}
+.cell-5 {
+  background: blueviolet;
+}
+.cell-6 {
+  background: limegreen;
+}
+.cell-7 {
+  background: coral;
+}
+.cell-8 {
+  background: lightseagreen;
+}
+.cell-9 {
+  background: maroon;
+}

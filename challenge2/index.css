@@ -1,0 +1,117 @@
+/* delete the following line if no text is used
+edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);*/
+
+/*use only the available space inside the 400x400 frame*/
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  color: #415868;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+	background: #3F3F3F;
+}
+
+.modal {
+	position: relative;
+	top: 25%;
+	left: 10%;
+	width: 80%;
+	height: 50%;
+	background: #fff;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0px 0px 10px 1px #323232;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	animation: 1s ease-out 0s 1 popIn;
+}
+.hide {
+}
+@keyframes popIn {
+	0% {
+    	transform: scale(0);
+  	}
+  	100% {
+    	transform: scale(1);
+  	}
+}
+.popOut {
+	animation: 1s ease-out 0s 1 popOut forwards;
+}
+@keyframes popOut{
+	0% {
+    	transform: scale(1);
+  	}
+  	100% {
+    	transform: scale(0);
+    	visibility: hidden;
+  	}
+}
+span {
+	display: block;
+}
+.modal-text {
+	margin: auto 40px 30px 40px; 
+	color: #415868;
+}
+.modal-text-header {
+	font-weight: 600;
+}
+
+/*Remove default button styles*/
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+	background: #EC3434;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0.5px 0.5px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+/* End of default button styles removal*/
+
+.dismiss-modal-btn {
+	height: 50px;
+	width: 100%;
+	background: #F65656;
+	border-radius: 0 0 4px 4px;
+}
+
+
+
