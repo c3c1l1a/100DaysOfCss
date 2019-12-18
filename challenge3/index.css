@@ -1,0 +1,84 @@
+/*// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+use only the available space inside the 400x400 frame*/
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nightCircle {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 100%;
+  background: rgb(29,66,83);
+  background: -moz-linear-gradient(180deg, rgba(29,66,83,1) 3%, rgba(29,66,83,1) 37%, rgba(34,132,152,1) 97%);
+  background: -webkit-linear-gradient(180deg, rgba(29,66,83,1) 3%, rgba(29,66,83,1) 37%, rgba(34,132,152,1) 97%);
+  background: linear-gradient(180deg, rgba(29,66,83,1) 3%, rgba(29,66,83,1) 37%, rgba(34,132,152,1) 97%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d4253",endColorstr="#228498",GradientType=1); 
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  transform: scale(0.1, 0.1);
+  border-radius: 100px;
+}
+
+:root {
+  --animation-time: 5s; 
+  --animation-delay: 2s;
+}
+
+.shootingStar {
+  width: 5vmin;
+  height: 80vmin;
+  position: absolute;
+  display: inline-block;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  transform: scale(0.1, 0.1) rotate(105deg);
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+}
+
+.animate {
+  animation: move var(--animation-time) linear var(--animation-delay) infinite;
+}
+
+@keyframes move {
+  0% {
+      transform: translate(0, 0) scale(0.1, 0.1)  rotate(105deg) ;
+    }
+    100%{
+      transform: translate(400px, 80px) scale(0.1, 0.1)  rotate(105deg);
+    }
+}
+
+.shootingStar.moved {
+  transform: translate(100%, 100%) scale(0.1, 0.1);
+  transition: transform 230ms ease-out;
+}
