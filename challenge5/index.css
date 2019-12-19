@@ -14,16 +14,41 @@
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
   overflow: hidden;
-  background: #fff;
+  background: black;
   color: #333;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.center {
+.container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.squares {
+  position: absolute;
+  border: solid 0.001rem gray;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: rotation 3s alternate infinite ease-in-out;
+}
+
+.container:hover .squares {
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  50%{
+    transform: translate(-50%,-50%) rotate(160deg);
+  }
+  100%{
+    transform: translate(-50%,-50%) rotate(-10deg);
+  }
 }
