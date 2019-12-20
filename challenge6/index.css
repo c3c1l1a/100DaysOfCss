@@ -1,0 +1,81 @@
+/*/ delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame*/
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #5CA4EA;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.hover-me-button {  
+  background: #5CA4EA;
+}
+
+.border {
+  fill:none;
+  stroke-width: 1;
+}
+.bg-line {
+  stroke: #FFFFFF;
+}
+
+.hl-line {
+  stroke: #85C1E9;
+  stroke-dasharray: 490 30;
+  stroke-dashoffset: 10;
+  transition: all 2s ease-in-out;
+}
+
+button:hover .hl-line {
+  stroke-dashoffset: -511.5;     
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1.16rem 3.3rem;
+    margin: -1px;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1.0rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #3498DB;
+  transition: background 2s ease-in-out;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0px 0px;
+}
+
+button:active {
+}
