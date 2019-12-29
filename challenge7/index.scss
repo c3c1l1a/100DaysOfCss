@@ -1,0 +1,84 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import 'trig.scss';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin shadows ($shadowsList) {
+
+} 
+
+@function xAndYPoint($angle, $radius){
+  $x: 0px + $radius * cos($angle);
+  $y: 0px + $radius * sin($angle);
+  @return $x,$y;
+}
+
+@function shadowsList($num, $radius, $offset){
+  $shadowsList: [],;
+  @for $i from 1 through $num {
+    $point: xAndYPoint($offset + 2*$pi*$i/$num, $radius);
+    $shadowsList: append($shadowsList, nth($point, 1) nth($point, 2) 0px 0px red);
+  }
+  @return $shadowsList;
+}
+
+$num: 10;
+$radius: 70px;
+$delay: -260ms;
+$animation-duration: 2s;
+$scale: 0.15;
+$offset: 0;
+
+@for $id from 1 through $num {
+  .div-#{$id} {
+      -webkit-box-shadow: shadowsList($num, $radius, $offset); 
+      -moz-box-shadow:    shadowsList($num, $radius, $offset); 
+      box-shadow:         shadowsList($num, $radius, $offset);
+      animation: rotation ease-in-out infinite;
+      animation-duration: 6s;
+      animation-delay: $delay;
+  }
+  $delay: $delay + 50ms;
+  $animation-duration: $animation-duration + 1s;
+  $radius: $radius + 50px;
+  //$offset: $offset + 0.09;
+}
+
+@keyframes rotation{
+  0%, 100%{
+    transform:  translate(-50%,-50%) scale(0.3)  rotate(0deg);
+    transform-origin: center center;
+
+  }
+  50%{
+    transform:  translate(-50%,-50%) scale(0.3) rotate(360deg) ;
+    transform-origin: center center;
+  }
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+
+}
+
